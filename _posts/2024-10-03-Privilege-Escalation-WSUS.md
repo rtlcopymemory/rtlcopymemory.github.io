@@ -6,12 +6,12 @@ title: Exploiting WSUS misconfiguration to priviledge escalate controlling DHCP
 In this post we will explore a simulation of a possible attack that I have spotted in the wild. Given that by company policy I am not allowed to alter the original PCs, this will be a simulated environment using VMs recreated as loyally as possible to the original golden image.
 
 # Pre-requisites
-- Being able to control the network's DHCP
-  - This can be achieved in multiple ways in reality, but the way I'll do it is by bridging network interfaces and disconnecting the "wifi"
-  - An example of more "stealthy" attack would be to host a wifi network
-- Having a DNS server (possibly on the same network)
-- [pywsus](https://github.com/GoSecure/pywsus)
-- [Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) or any Microsoft signed executable
+- Being able to control the network's DHCP.
+  - This can be achieved in multiple ways in reality, but the way I'll do it is by bridging network interfaces and disconnecting the "wifi".
+  - An example of more "stealthy" attack would be to host a wifi network.
+- Having a DNS server (possibly on the same network).
+- [pywsus](https://github.com/GoSecure/pywsus).
+- [Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) or any Microsoft signed executable.
 
 # Detection
 ```
@@ -27,10 +27,10 @@ If we get http (and NOT https) in the first output and 0x1 in the second, it mea
 This attack uses the fact that http requests are not authenticated. We also should be wary of people possibly sniffing DNS queries if they own the network as often the domain names for the WSUS servers are fairly recognizeable and could leak the targeted domain to spoof later on (finding out the domain name without access to the machine).
 
 # Setup
-To perform this attack I will use a Kali machine with the following packages installed from `apt`: `isc-dhcp-server` and `dnsmasq` (technically dnsmasq also has a DHCP server) and the git clone'd pywsus
+To perform this attack I will use a Kali machine with the following packages installed from `apt`: `isc-dhcp-server` and `dnsmasq` (technically dnsmasq also has a DHCP server) and the git clone'd pywsus.
 The target machine is a Windows 10 machine. We normally are only given a AD User without access to the machine's administration.
 
-We want the two machines to be in the same network, either by having one common "internet-less" connection or, say in a more realistic scenario, by being in the same wifi (and maybe guessing the often weak admin password for the router). Normally this attack is performed using [bettercap](https://github.com/bettercap/bettercap) but in this case I decided to go for a different route as I am not sure how easy it is to get into the same subnet in the company environment (and I didn't want to try and upset the IT departent (again)).
+We want the two machines to be in the same network, either by having one common "internet-less" connection or, say in a more realistic scenario, by being in the same wifi (and maybe guessing the often weak admin password for the router). Normally this attack is performed using [bettercap](https://github.com/bettercap/bettercap) but in this case I decided to go for a different route as I am not sure how easy it is to get into the same subnet in the company environment (and I didn't want to try and upset the IT department (again)).
 
 ## dhcp
 We will configure the attack box on IP `192.168.222.1` as the gateway, dhcp server and dns server (and later on the wsus server too).
