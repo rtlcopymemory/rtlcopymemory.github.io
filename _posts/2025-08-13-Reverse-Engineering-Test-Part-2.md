@@ -23,7 +23,7 @@ However now mentions of the `vftable` are almost complete gone
 
 x64dbg is smart and already comments on the side of the pure virtual call what it will be, but let’s analyze it further
 
-![image.png]([image%203.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/4.png?raw=true))
+![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/4.png?raw=true)
 
 We look at RAX (which we know thanks to the x64dbg comments, contains the pointer to the `vftable`) `00007FF62D0133F0` (.rdata)
 
@@ -31,7 +31,7 @@ We look at RAX (which we know thanks to the x64dbg comments, contains the pointe
 
 It contains a pointer (Little Endian): `00007FF62D0115D0` (.text)
 
-![image.png]([image%205.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/6.png?raw=true))
+![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/6.png?raw=true)
 
 ![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/7.png?raw=true)
 
