@@ -4,11 +4,9 @@ title: Reverse Engineering - Test Class - Part 2
 ---
 
 # Edits from previous
-
 I only added `__declspec(noinline)` before every function in the header in order to prevent inlining
 
 # Differences
-
 First of all, both decompilers show the decompilation much clearer
 
 ![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/1.png?raw=true)
