@@ -11,11 +11,11 @@ First of all, both decompilers show the decompilation much clearer
 
 ![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/1.png?raw=true)
 
-![image.png]([image%201.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/2.png?raw=true))
+![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/2.png?raw=true)
 
 I have also now decompiled it using IDA:
 
-![image.png]([image%202.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/3.png?raw=true))
+![image.png](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/Test2/3.png?raw=true)
 
 However now mentions of the `vftable` are almost complete gone
 
