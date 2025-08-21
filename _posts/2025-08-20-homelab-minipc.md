@@ -14,4 +14,4 @@ However [a friend of mine](https://ioctl.fail/) who knows much more about VMs ga
 - `nodatacow` is needed for btrfs to not lose all the performance when using it as a VM disk destination
 - Use [bees](https://github.com/Zygo/bees/tree/master) to perform deduplication on btrfs
 
-I also installed tailscale and enabled RDP so that I can access it from my main PC and even when I'm not home!
+I also Installed tailscale and enabled RDP so that I can access it from my main PC and even when I'm not home!
