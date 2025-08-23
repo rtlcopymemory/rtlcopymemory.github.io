@@ -15,3 +15,8 @@ However [a friend of mine](https://ioctl.fail/) who knows much more about VMs ga
 - Use [bees](https://github.com/Zygo/bees/tree/master) to perform deduplication on btrfs
 
 I also Installed tailscale and enabled RDP so that I can access it from my main PC and even when I'm not home!
+
+# VMs
+## REMnux
+I converted the official `.ova` after installing REMnux from scratch twice and having issues with default packages.  
+After booting up the VM, internet wouldn't work. Checking `ip a` I see the interfaces are not configured correctly so I checked the `netplan` config and found out the NIC name was wrong in the config file, changing that to my NAT default fixes the internet. After that I also added an extra NIC for a "host only" network and cofnigured it with a static IP.
