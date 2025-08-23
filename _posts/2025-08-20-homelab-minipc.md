@@ -24,4 +24,4 @@ After booting up the VM, internet wouldn't work. Checking `ip a` I see the inter
 ## FlareVM
 For this I just installed Windows 10 on a VM and followed the instructions to install FlareVM. At the end I replaced the NIC network from NAT to the "host only" network I created and gave to REMnux too.
 
-![REMnux screenshot](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/homelab/imageREMnux.png)
+![REMnux and flarevm screenshot](https://github.com/rtlcopymemory/rtlcopymemory.github.io/blob/master/images/homelab/imageREMnux.png?raw=true)
