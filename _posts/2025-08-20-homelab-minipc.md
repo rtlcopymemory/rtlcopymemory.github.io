@@ -20,3 +20,7 @@ I also Installed tailscale and enabled RDP so that I can access it from my main 
 ## REMnux
 I converted the official `.ova` after installing REMnux from scratch twice and having issues with default packages.  
 After booting up the VM, internet wouldn't work. Checking `ip a` I see the interfaces are not configured correctly so I checked the `netplan` config and found out the NIC name was wrong in the config file, changing that to my NAT default fixes the internet. After that I also added an extra NIC for a "host only" network and cofnigured it with a static IP.
+
+# FlareVM
+For this I just installed Windows 10 on a VM and followed the instructions to install FlareVM. At the end I replaced the NIC network from NAT to the "host only" network I created and gave to REMnux too.
+
